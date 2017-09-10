@@ -37,7 +37,7 @@ head(newY)
 addThese <- data.frame(newX, newY)
 addThese <- rename(addThese, NiV_MFI = fit)
 
-###not working- why
+###not working- why- ggplot does not know how to deal with class nls
 ggplot(titration, aes(x = mAbCEs, y = NiV_MFI)) + 
   geom_point(col = "cornflowerblue", size = 3) +
   labs(x = "mAbCEs", y = "NiV_MFI") +
